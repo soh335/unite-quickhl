@@ -4,7 +4,11 @@ let s:source = {
       \}
 
 function! unite#sources#quickhl#define()
-  return s:source
+  if exists("g:loaded_quickhl")
+    return s:source
+  endif
+
+  return {}
 endfunction
 
 function! s:source.gather_candidates(args, context)
