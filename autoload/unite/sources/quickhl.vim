@@ -50,4 +50,3 @@ function! s:action_table.delete.func(candidate)
 endfunction
 
 let s:source.action_table.common = s:action_table
-
